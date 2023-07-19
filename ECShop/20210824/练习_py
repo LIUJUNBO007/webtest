@@ -1,0 +1,26 @@
+import time
+
+from Common import Base
+
+# driver = base.open_browser()
+# base = base.Base(driver)
+# base.open_url('http://www.baidu.com')
+# search_loc = ('id', 'kw')
+# button_loc = ('id', 'su')
+# base.send_keys(locator=search_loc,text='PO设计模式')
+# base.click(locator=button_loc)
+# time.sleep(5)
+# driver.quit()
+
+
+driver = Base.open_browser()
+base = Base.Base(driver)
+base.open_url("https://www.newduba.cn/?f=qd_chedh&ft=gjlock&--type=0&br3rd=1&wn=3&hid=10_167_910_34_&pru=1&notray=1")
+search_loc = ('id','search_keyword')
+# botton_loc = ('class name','btn_search')
+# base.send_keys(text='wwwww', locator=search_loc)
+connect_loc=('partial link text','携程机票')
+# base.click(botton_loc)
+base.click(connect_loc)
+time.sleep(5)
+driver.quit()
